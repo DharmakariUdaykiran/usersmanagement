@@ -1,0 +1,58 @@
+ 
+    <div class="container" >
+        <div id='one'>
+            <ul>
+                <li [routerLink]="['/','summary']" id="sum"> Summary  </li>
+                <li [routerLink]="['/','users']" id="manuser"> Manage User  </li>
+                <li [routerLink]="['/','manage_personal']" id="manperson">  Manager Personal  </li>
+                <li [routerLink]="['/','manage_system_role']" id="mansystem">  Manage System Role  </li>
+            </ul>
+        </div>
+        
+        <div id='two'>
+            <i class="fa fa-user-circle" aria-hidden="true" id="login" [routerLink]="['/','login']"></i>
+            <ul>
+                <i class="fa fa-tachometer" aria-hidden="true"></i>
+                <li [routerLink]="['/','dashboard']" id="board">Dashboard</li><br><br>
+                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                <li [routerLink]="['/','analytics']" id="analy">Analytics</li><br><br>
+                <i class="fa fa-users" aria-hidden="true"></i>
+                <li [routerLink]="['/','users']" id="userman">User.Manage</li><br><br>
+                <i class="fa fa-th-large" aria-hidden="true"></i>
+                <li [routerLink]="['/','tile_management']" id="tile">Tile.Manage</li><br><br>
+                <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                <li [routerLink]="['/','organisation_management']" id="organisation">org.Manage</li><br><br>
+                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                <li [routerLink]="['/','admin_management']" id="admin">Admin.Manage</li><br>
+            </ul>
+
+        </div>
+        <div id='three'>
+            <nav id="ten">
+                <ul>
+                    <i class="fa fa-eye" aria-hidden="true" id="view" [routerLink]="['/','users']"></i>
+                    <i class="fa fa-pencil-square" aria-hidden="true"  id="edit" [routerLink]="['/','adduser']"></i> 
+                    <i class="fa fa-plus-circle" aria-hidden="true" id="add" [routerLink]="['/','adduser']"></i>
+                    <li id="search"><input type="search" ><i class="fa fa-search" aria-hidden="true" id="sear"></i></li>
+                </ul>
+            </nav><br>
+            <table class="table table-hover light">
+                <thead>
+                    <th><input type="checkbox"></th>
+                    <th>Name</th>
+                    <th>Organization</th>
+                    <th>personal Role</th>
+                    <th>System Role</th>
+                    <th>Status</th>
+                </thead>
+                <tbody>
+                <tr (newItemEvent)="addItem($event)" *ngFor="let item of items1" >
+                    <td><input type="checkbox" ></td>
+                    <td>{{ item }}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+

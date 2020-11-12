@@ -1,0 +1,13 @@
+<div class='continer' id="two">
+    <form #login="ngForm">
+        <label><strong>USER DETAILS</strong></label><br>
+        <i class="fa fa-user-circle" aria-hidden="true" id="login"></i><br>
+        <label>Email : </label>
+<input type="email" name="email" placeholder="Enter Emailid" email ngModel required #email='ngModel'id="one"><br>
+<span *ngIf="email.touched && !email.valid">please enter email id correctly</span><br>
+<label>Password : </label>
+    <input type="password" name="password" placeholder="Enter password" ngModel required id="three" pattern="[0-9]{4}"><br>
+   <button  [routerLink]="['/','users']" [disabled]="!login.valid" id="four">submit</button>
+</form>
+</div>
+

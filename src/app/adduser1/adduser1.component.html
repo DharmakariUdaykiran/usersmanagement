@@ -1,0 +1,32 @@
+
+<div class="container">
+    <form [formGroup]="addform1" (ngSubmit)=postdata() >
+        <button [routerLink]="['/','adduser1']"[disabled]="!addform1.valid" id="one">Cancel</button>
+        <button [routerLink]="['/','users']"  [disabled]="!addform1.valid" id="one">Add User</button>
+        <label><h4>System Profile</h4></label>
+        <label>Personal Role </label>
+        <select formControlName="personal_role">
+            <option></option>
+            <option>Default User</option>
+            <option>Chapter Lead</option>
+            <option>DDM</option>
+            <option>Development</option>
+            <option>DGM</option>
+            <option>Process Consultant</option>
+            <option>Product Owner</option>
+            <option>Solution Architect</option>
+        </select><br>
+        <label>System Role </label>
+        <select formControlName="system_role">
+            <option></option>
+            <option>Default User</option>
+            <option>Admin User</option>
+            <option>Super Admin</option>
+            <option>Admin-TilesMgmt</option>
+            <option>Admin-UserMgmt</option>
+        </select><br>
+        <label>Status </label>
+        <input type="radio" formControlName="status" value="active">Active &nbsp;&nbsp;&nbsp; <input type="radio" formControlName="status" value="Inactive">Inactive <br><br>
+        <button  [routerLink]="['/','adduser']" [disabled]="!addform1.valid" (click)="show()">back</button>
+    </form>
+</div>

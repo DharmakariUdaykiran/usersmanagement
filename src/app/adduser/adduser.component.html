@@ -1,0 +1,37 @@
+
+<div class="container">
+<form [formGroup] = "addform" >
+    <h4>PERONAL PROFILE</h4>
+    <label>Name </label>
+    <input type="text" formControlName="name" #newItem ><br>
+    <label> Email Id </label>
+    <input type="email" formControlName="email" ><br>
+    <label>Employee Id </label>
+    <input type="text" formControlName="employee_id" ><br>
+    <label>Organisation </label>
+    <input type="text" formControlName="organisation" #newItem1><br>
+    <br>
+    <h4>OPtional </h4>
+    <label>Region </label>
+    <select formControlName="region">
+        <option>mumbai</option>
+        <option>kolkatta</option>
+        <option>banglore</option>
+    </select><br>
+    <label>City   </label>
+    <select formControlName="city">
+        <option>mumbai</option>
+        <option>kolkatta</option>
+        <option>banglore</option>
+    </select><br>
+    <label>Country  </label>
+    <select formControlName="country">
+        <option>INDIA</option>
+        <option>AMERICA</option>
+        <option>AUSTRALIA</option>
+    </select><br><br>
+    <button type="button" [routerLink]="['/','adduser1']" [disabled]="!addform.valid"  (click)="addNewItem(newItem.value)" >continue</button>
+</form>
+
+</div>
+

@@ -1,0 +1,153 @@
+#one{
+    grid-area:header;
+}
+#two{
+    grid-area:menu;
+}
+#three{
+    grid-area:main;
+}
+.container{
+    display:grid;
+    grid-template-areas:"menu header header header header header"
+    "menu main main main main main";
+    grid-gap:10px;
+    padding:4px;
+    border:1px solid black;
+    width:100%;
+    height:500px;
+    background-color:grey;
+}
+.container>div{
+    background-color:white;
+    padding:10px;
+    font-size:10px;
+    text-align:center;
+    color:black;
+border:1px solid black;
+}
+.container>div#three{
+    width:980px;
+    height:330px;
+    border:1px solid black;
+    
+}
+.container>div#one{
+    width:980px;
+    height:80px;
+    border:1px solid black;
+    cursor:pointer;
+}
+.container>div#two{
+    width:220px;
+    margin-top:0px;
+    cursor: pointer;
+}
+table{
+    border:1px solid black;
+    width:980px;
+    height:20px;
+    padding:2px;
+    font-size:20px;
+}
+li{
+    list-style-type: none;
+    display:inline-block;
+    padding:0px;
+    text-decoration: none;
+}
+nav{
+    float:left;
+    display:block;
+    border:1px solid black;
+    width:978px;
+}
+div#one{
+    float:left;
+    font-size:22px;
+    padding:8px;
+    margin:6px;
+}
+#two>ul{
+    float:left;
+    font-size:20px;
+    margin-top:140px;
+    margin-left:30px;
+    text-align:center;
+}
+#one>li{
+    border:1px solid black;
+}
+#sum{
+    margin-left:2px;
+    float:left;
+}
+#manuser{
+    margin-left:20px;
+    float:left;
+}
+#manperson{
+    margin-left:30px;
+    float:left;
+}
+#mansystem{
+    margin-left:40px;
+    float:left;
+}
+#sum:hover{
+    color:yellow;
+}
+#manuser:hover{
+    color:orange;
+}
+#manperson:hover{
+    color:indigo;
+}
+#mansystem:hover{
+    color:violet;
+}
+#board:hover{
+    color:yellow;
+}
+#analy:hover{
+    color:orange;
+}
+#userman:hover{
+    color:indigo;
+}
+#tile:hover{
+    color:violet;
+}
+#organisation:hover{
+    color:green;
+}
+#admin:hover{
+    color:red;
+}
+#search{
+    float:right;
+    margin-right:10px;
+}
+#view{
+    float:left;
+    cursor:pointer;
+    font-size:30px;
+}
+#edit{
+    float:left;
+    margin-left:20px;
+    cursor:pointer;
+    font-size:30px;
+}
+#add{
+    float:left;
+    margin-left:30px;
+    cursor:pointer;
+    font-size:30px;
+}
+#login{
+font-size:20px;
+}
+#sear{
+    font-size:20px;
+}

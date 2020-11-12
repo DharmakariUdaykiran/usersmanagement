@@ -1,0 +1,15 @@
+.container{
+    width:600px;
+    height:380px;
+    text-align:center;
+    margin-top:100px;
+    margin-left:300px;
+    border:1px solid grey;
+    background-color:silver;
+}
+input,select{
+    margin-top:30px;
+}
+#one{
+    margin:20px;
+}
